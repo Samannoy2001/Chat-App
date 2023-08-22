@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humming</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=
+    Josefin+Sans&family=Mynerve&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+    <div class="title">
+        <img src="icons/logo.png" width="35px">
+        <h1>Humming</h1>
+    </div>
+    <button  type="button" onclick="show_hide()">
+        <img src="icons/ham2.png"   width="35px">
+    </button>
+    </header>
+
+    <div class="container">
+        <div class="users-window">
+            <div class="users-head">
+            <h3>People</h3>
+            <h4 class="users-count">0</h4>
+            </div>
+            <div class="users-list">
+            <!-- <p>Sam</p>
+            <p>Suvankar</p>
+            <p>Souptik</p> --> 
+            </div>
+        </div>
+
+        <div class="chat-window">
+            <div class="chats">
+                <!-- <div class="user-joined">
+                    <p><b>sam</b> joined the chat</p>
+                </div> -->
+                <!-- <div class="message incoming">
+                    <h5>sam</h5>
+                    <p>hello Suvankar</p>
+                </div>
+                <div class="message outgoing">
+                    <h5>Souptik</h5>
+                    <p>welcome sam</p>
+                </div> -->
+            </div>
+            <div class="user-input">
+                <input id="users-msg" type="text" placeholder="type your message">
+                <button  type="button" id="btn"> <b> SEND </b></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var uwindow=document.querySelector('.users-window')
+    function show_hide(){
+        if (uwindow.style.display=="block") {
+            uwindow.style.display = "none";
+        }
+        else{
+            uwindow.style.display = "block";
+        }
+    }
+</script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/client.js"></script>
+
+
+</html>
